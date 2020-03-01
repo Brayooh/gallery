@@ -11,5 +11,3 @@ urlpatterns=[
     url(r'^search/', views.search_results,name='search_results'), 
    
 ]
-
-
