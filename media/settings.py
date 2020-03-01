@@ -82,7 +82,9 @@ WSGI_APPLICATION = 'media.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-       
+        'NAME': 'dbgallery',
+        'USER': 'brayooh',
+        'PASSWORD':'brian',
     }
 }
 
