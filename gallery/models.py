@@ -22,6 +22,15 @@ class Location(models.Model):
 
 
 
+class image(models.Model):
+    image = models.ImageField(upload_to='images')
+    image_name = models.CharField(max_length=50)
+    caption = models.TextField()
+    location = models.ForeignKey(Location, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    pub_date = models.DateTimeField(auto_now_add=True)
+    tags = models.ManyToManyField(tags)
+
 
     
 
