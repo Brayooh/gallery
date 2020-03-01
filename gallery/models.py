@@ -31,6 +31,18 @@ class image(models.Model):
     pub_date = models.DateTimeField(auto_now_add=True)
     tags = models.ManyToManyField(tags)
 
+    def delete_image(self):
+        self.delete()
+
+    @classmethod
+    def search_by_category(cls, search_term):
+        image_by_category = cls.objects.filter(category__name__icontains=search_term)
+
+        return image_by_category
+
+    @classmethod
+    def get_image_by_id(cls, id):
+        return cls.objects.get(pk=id)
 
     
 
