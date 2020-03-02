@@ -1,8 +1,6 @@
-#** Gallery app**
+# Pic Hub
 
-#### This is my personal gallery website where you can see photos that i have uploaded.
-
-***## As users you can :
+### As users you can :
 * View different photos that interest me.
 * View different categories of photos.
 * Copy a link to the photo to share with my friends.
@@ -30,7 +28,7 @@
 3. Create database on psql shell
   ```SQL
   psql
-  CREATE DATABASE gallery;
+  CREATE DATABASE dbgallery;
   ```
 4. Migrate the database and run the application
   ```bash
@@ -39,16 +37,23 @@
   ```
 
 ## Technologies Used
-* python3
+* python3.6
 * Django3
 * HTML5
 * Bootstrap4
-* css
+* CSS3
 
 
 ## Known Bugs.
 * There are currently no known bugs. Feel free to open an issue concerning the app anytime :)
 
-### Support and contact details
+## Support and contact details
 If you have any queries regarding the app, Please feel free to
-contact the developer team on [gmail](brianndichu.bn@gmail.com) and we will be ready to respond.
+contact the developer team on [gmail](brianndichu.bn@gmail.com) and I will be ready to respond.
+
+### Licence
+[MIT](LICENSE)
+
+
+
+
