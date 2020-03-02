@@ -27,6 +27,10 @@ def search_results(request):
         message = "You have not searched for any picture"
         return render(request, 'search.html', {"message": message})
 
+def about(request):
+
+    return render(request, 'about.html')
+
 
 # def copy_to_clipboard(request):
     
