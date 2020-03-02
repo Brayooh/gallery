@@ -1,4 +1,5 @@
 from django.db import models
+import pyperclip
 
 
 class Category(models.Model):
@@ -19,6 +20,8 @@ class Location(models.Model):
 
     def __str__(self):
         return self.name
+
+
 
 
 
@@ -43,6 +46,13 @@ class image(models.Model):
     @classmethod
     def get_image_by_id(cls, id):
         return cls.objects.get(pk=id)
+
+    @classmethod
+    def filter_by_location(cls, search_location):
+        imageLocation=cls.objects.filter(location__name=search_location)
+        return imageLocation
+
+
 
     
 
