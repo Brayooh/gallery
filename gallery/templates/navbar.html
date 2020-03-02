@@ -17,14 +17,31 @@
         </button>
 
 
-        <div class="collapse navbar-collapse w-auto" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <!-- <a style="font-family: Righteous; font-size: 22px; color: rgb(250, 133, 0);" href="/">about</a> -->
+                        <li>
+                            <h1></h1>
+                        </li>
+                        <ul>
+
                 </li>
 
 
             </ul>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="location/" id="navbarDropdown" role="button" data-toggle="dropdown">
+                      Location
+                    </a>
+                    {% for place in all_location %}
+
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="">{{ place.name }}</a>
+                    </div>
+                    {% endfor %}
+
+                  </li>
+                </ul>
             <div class="w-auto float-right">
                 <form style=" font-family: exo; font-size: 17px; height: 22px;" class="form-inline my-2 my-lg-0"
                     action="{% url 'search_results' %}">
@@ -33,7 +50,8 @@
                         aria-label="Search" name="pictures">
                     <button style="height: 33px; font-family: Righteous;" class="btn btn-outline-warning my-2 my-sm-0"
                         type="submit">SEARCH</button>
-                    <a style="font-family: Righteous; font-size: 22px; color: rgb(250, 133, 0); margin-left: 16px;" href="/">about</a>
+                    <a style="font-family: Righteous; font-size: 22px; color: rgb(250, 133, 0); margin-left: 16px;"
+                        href="/">about</a>
                 </form>
             </div>
         </div>
