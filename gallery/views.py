@@ -1,7 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from .models import image
+from .models import image, Location
 
+# ALL_LOCATION = location.objects.all()
 
 def posted_images(request):
 
@@ -21,15 +22,19 @@ def search_results(request):
         searched_pictures = image.search_by_category(searched_term)
         message = f"{searched_term}"
 
-        return render(request, 'search.html', {"message": message, "pictures": searched_pictures})
+        return render(request, 'search.html', {"message": message, "pictures": searched_pictures}, {"ALL_LOCATION":ALL_LOCATION})
 
     else:
         message = "You have not searched for any picture"
-        return render(request, 'search.html', {"message": message})
+        return render(request, 'search.html', {"message": message}, {"ALL_LOCATION":ALL_LOCATION})
 
 def about(request):
 
     return render(request, 'about.html')
+
+def get_location(request):
+    all_location = location.objects.all()
+    return render(request, {"all_location":all_location})
 
 
 # def copy_to_clipboard(request):
