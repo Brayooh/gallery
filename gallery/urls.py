@@ -10,6 +10,7 @@ urlpatterns=[
     url(r'^$', views.about, name='about'),
     url(r'^pichub', views.posted_images, name='home'),
     url(r'^search/', views.search_results,name='search_results'),
+    url(r'^location/<all_location>', views.get_location, name='location')
     
 
    
