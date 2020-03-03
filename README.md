@@ -51,6 +51,11 @@
 If you have any queries regarding the app, Please feel free to
 contact the developer team on [gmail](brianndichu.bn@gmail.com) and I will be ready to respond.
 
+## Codebeat
+
+[![codebeat badge](https://codebeat.co/badges/6aa6efa4-276c-42d2-8f8a-4ab646cd7f63)](https://codebeat.co/projects/github-com-brayooh-gallery-master)
+
+
 ### Licence
 [MIT](LICENSE)
 
