@@ -12,32 +12,35 @@
 
   </div>
 
+  <div class="row">
 
   {% if pictures %}
   {% for pic in pictures %}
-  <div class="row">
+  <div class="container" style="font-family: ABeeZee;">
 
-    <div class="col-md-4">
-      <div class="card mb-4 shadow-sm" style="background-color: rgb(41, 41, 41);">
-        <img src='{{pic.image.url}}' alt="" class="card-img-top" width="100%" height="225" type="button"
-          class="btn btn-sm btn-outline-primary" id="pic{{pic.id}}" data-whatever="{{pic.id}}" data-toggle="modal"
-          data-target="#{{pic.id}}">
-        <div class="card-body" style="text-align: center;">
-          <p1 style="font-size: 15px; color: rgb(255, 220, 155);">
-            {{ pic.caption }}
-          </p1>
-          <div class="d-flex justify-content-between align-items-center">
-            <div class="btn-group">
+
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm" style="background-color: rgb(41, 41, 41);">
+          <img src='{{pic.image.url}}' alt="" class="card-img-top" width="100%" height="225" type="button"
+            class="btn btn-sm btn-outline-primary" id="pic{{pic.id}}" data-whatever="{{pic.id}}" data-toggle="modal"
+            data-target="#{{pic.id}}">
+          <div class="card-body" style="text-align: center;">
+            <p1 style="font-size: 15px; color: rgb(255, 220, 155);">
+              {{ pic.caption }}
+            </p1>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+
+              </div>
 
             </div>
-
           </div>
         </div>
       </div>
     </div>
 
-    {% endfor %}
-    {% endif %}
+  {% endfor %}
+  {% endif %}
   </div>
-  
+
   {% endblock %}
