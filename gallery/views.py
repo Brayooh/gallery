@@ -22,11 +22,11 @@ def search_results(request):
         searched_pictures = image.search_by_category(searched_term)
         message = f"{searched_term}"
 
-        return render(request, 'search.html', {"message": message, "pictures": searched_pictures}, {"ALL_LOCATION":ALL_LOCATION})
+        return render(request, 'search.html', {"message": message, "pictures": searched_pictures})
 
     else:
         message = "You have not searched for any picture"
-        return render(request, 'search.html', {"message": message}, {"ALL_LOCATION":ALL_LOCATION})
+        return render(request, 'search.html', {"message": message},)
 
 def about(request):
 
